@@ -153,7 +153,8 @@ function App() {
         <header className="topbar">
           <div>
             <p className="eyebrow">Rotina financeira - Maio/2026</p>
-            <h1>Conferência automatizada de extrato x lançamentos</h1>
+            <h1>Conciliação Bancária</h1>
+            <p className="topbar-summary">Extrato bancário, lançamentos internos e divergências em uma tela operacional.</p>
           </div>
           <div className="topbar-actions">
             <span className="sync-pill">Ultima execucao: {lastRunAt.toLocaleTimeString("pt-BR")}</span>
