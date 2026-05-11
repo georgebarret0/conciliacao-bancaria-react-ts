@@ -1,0 +1,8 @@
+id,expectedDate,description,document,amount,costCenter,direction
+entry-001,2026-05-02,Recebimento pedido PED-10482,PED-10482,42800,Comercial Recife,credit
+entry-002,2026-05-03,Recebimento loja B2B PED-10491,PED-10491,18540,E-commerce,credit
+entry-003,2026-05-04,Tarifa bancaria mensal,TAR-0504,-49.9,Financeiro,debit
+entry-004,2026-05-08,Recebimento atacado PED-10504,PED-10504,61100,Atacado,credit
+entry-005,2026-05-06,Recebimento cliente nordeste PED-10521,PED-10521,7800,Comercial Nordeste,credit
+entry-006,2026-05-07,Pagamento fornecedor logistica,NF-8810,-12800,Operacoes,debit
+entry-007,2026-05-09,Recebimento pendente PED-10540,PED-10540,15600,Comercial Recife,credit
