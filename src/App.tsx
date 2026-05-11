@@ -120,7 +120,7 @@ function App() {
           </div>
         </div>
 
-        <nav className="nav-list" aria-label="Visoes">
+        <nav className="nav-list" aria-label="Visões">
           <button className={viewMode === "results" ? "active" : ""} onClick={() => setViewMode("results")}>
             <Calculator size={18} />
             Resultado
@@ -136,7 +136,7 @@ function App() {
         </nav>
 
         <div className="side-metric">
-          <span>Diferenca total</span>
+          <span>Diferença total</span>
           <strong className={summary.totalDifference === 0 ? "ok" : "attention"}>
             {formatCurrency(summary.totalDifference)}
           </strong>
@@ -144,8 +144,8 @@ function App() {
 
         <div className="side-list">
           <SideLine label="Conciliados" value={summary.matched} tone="ok" />
-          <SideLine label="Divergencias" value={summary.valueDivergence + summary.dateDivergence} tone="warn" />
-          <SideLine label="Pendencias" value={summary.missingBank + summary.missingInternal} tone="bad" />
+          <SideLine label="Divergências" value={summary.valueDivergence + summary.dateDivergence} tone="warn" />
+          <SideLine label="Pendências" value={summary.missingBank + summary.missingInternal} tone="bad" />
         </div>
       </aside>
 
@@ -157,7 +157,7 @@ function App() {
             <p className="topbar-summary">Extrato bancário, lançamentos internos e divergências em uma tela operacional.</p>
           </div>
           <div className="topbar-actions">
-            <span className="sync-pill">Ultima execucao: {lastRunAt.toLocaleTimeString("pt-BR")}</span>
+            <span className="sync-pill">Última execução: {lastRunAt.toLocaleTimeString("pt-BR")}</span>
             <button className="ghost-button" onClick={resetDemo}>
               <RefreshCcw size={17} />
               Restaurar demo
@@ -169,14 +169,14 @@ function App() {
           </div>
         </header>
 
-        <section className="summary-grid" aria-label="Resumo da conciliacao">
-          <MetricCard icon={<CircleDollarSign />} label="Extrato bancario" value={formatCurrency(summary.totalBankAmount)} />
+        <section className="summary-grid" aria-label="Resumo da conciliação">
+          <MetricCard icon={<CircleDollarSign />} label="Extrato bancário" value={formatCurrency(summary.totalBankAmount)} />
           <MetricCard icon={<CircleDollarSign />} label="Lançamentos internos" value={formatCurrency(summary.totalInternalAmount)} />
           <MetricCard icon={<BadgeCheck />} label="Conciliados" value={summary.matched.toString()} tone="ok" />
-          <MetricCard icon={<AlertTriangle />} label="Pendencias" value={(summary.missingBank + summary.missingInternal + summary.manualReview).toString()} tone="warn" />
+          <MetricCard icon={<AlertTriangle />} label="Pendências" value={(summary.missingBank + summary.missingInternal + summary.manualReview).toString()} tone="warn" />
         </section>
 
-        <section className="control-strip" aria-label="Controles da conciliacao">
+        <section className="control-strip" aria-label="Controles da conciliação">
           <div className="field">
             <label htmlFor="search">Busca</label>
             <div className="input-with-icon">
@@ -204,7 +204,7 @@ function App() {
           </div>
 
           <div className="field compact">
-            <label htmlFor="amountTolerance">Tolerancia valor</label>
+            <label htmlFor="amountTolerance">Tolerância valor</label>
             <input
               id="amountTolerance"
               type="number"
@@ -216,7 +216,7 @@ function App() {
           </div>
 
           <div className="field compact">
-            <label htmlFor="dateTolerance">Tolerancia dias</label>
+            <label htmlFor="dateTolerance">Tolerância dias</label>
             <input
               id="dateTolerance"
               type="number"
@@ -236,7 +236,7 @@ function App() {
           </label>
         </section>
 
-        <section className="action-row" aria-label="Importacao e exportacao">
+        <section className="action-row" aria-label="Importação e exportação">
           <input
             ref={bankInputRef}
             className="hidden-input"
@@ -325,9 +325,9 @@ function ResultsView({ results }: { results: ReconciliationResult[] }) {
               <th>Documento</th>
               <th>Banco</th>
               <th>Interno</th>
-              <th>Diferenca</th>
+              <th>Diferença</th>
               <th>Dias</th>
-              <th>Confianca</th>
+              <th>Confiança</th>
               <th>Motivo</th>
             </tr>
           </thead>
@@ -362,14 +362,14 @@ function ResultsView({ results }: { results: ReconciliationResult[] }) {
 function BankView({ rows }: { rows: BankTransaction[] }) {
   return (
     <section className="panel">
-      <PanelHeader icon={<Banknote size={18} />} title="Extrato bancario" meta={`${rows.length} movimentos`} />
+      <PanelHeader icon={<Banknote size={18} />} title="Extrato bancário" meta={`${rows.length} movimentos`} />
       <div className="table-wrap">
         <table>
           <thead>
             <tr>
               <th>Data</th>
               <th>Documento</th>
-              <th>Descricao</th>
+              <th>Descrição</th>
               <th>Conta</th>
               <th>Valor</th>
             </tr>
@@ -401,7 +401,7 @@ function InternalView({ rows }: { rows: InternalEntry[] }) {
             <tr>
               <th>Data prevista</th>
               <th>Documento</th>
-              <th>Descricao</th>
+              <th>Descrição</th>
               <th>Centro de custo</th>
               <th>Valor</th>
             </tr>
