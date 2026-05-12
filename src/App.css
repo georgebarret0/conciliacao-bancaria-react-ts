@@ -23,13 +23,15 @@
 
 .brand-mark {
   display: grid;
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
   place-items: center;
-  border: 1px solid rgba(134, 239, 172, 0.46);
-  border-radius: 8px;
-  background: rgba(34, 197, 94, 0.16);
-  color: #bbf7d0;
+  border: 1px solid rgba(72, 166, 255, 0.55);
+  border-radius: 0;
+  background: linear-gradient(135deg, #070a0f, #0c1b2b);
+  color: #7cc5ff;
+  font-size: 14px;
+  font-weight: 800;
 }
 
 .brand strong,
@@ -40,7 +42,7 @@
 .brand small {
   margin-top: 3px;
   color: #b8c5d8;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .nav-list {
@@ -80,13 +82,13 @@
 .side-metric span,
 .side-line span {
   color: #b8c5d8;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .side-metric strong {
   display: block;
   margin-top: 8px;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .side-metric .ok,
@@ -140,7 +142,7 @@
   max-width: 620px;
   margin: 0;
   color: #121826;
-  font-size: 28px;
+  font-size: 25px;
   line-height: 1.15;
 }
 
@@ -148,7 +150,7 @@
   max-width: 680px;
   margin: 8px 0 0;
   color: #65736f;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.55;
 }
 
@@ -245,13 +247,13 @@ button {
 .metric-card p {
   margin: 0 0 5px;
   color: #65736f;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .metric-card strong {
   display: block;
   color: #121826;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.2;
 }
 
@@ -267,7 +269,7 @@ button {
 
 .control-strip {
   display: grid;
-  grid-template-columns: minmax(260px, 1fr) 220px 140px 130px 180px;
+  grid-template-columns: minmax(240px, 1fr) minmax(170px, 0.72fr) 120px 112px minmax(142px, max-content);
   gap: 12px;
   margin-bottom: 12px;
   border: 1px solid #d8e1dc;
@@ -320,9 +322,13 @@ select {
 
 .switch-control {
   display: flex;
-  align-items: end;
+  align-items: center;
   gap: 8px;
-  padding-bottom: 9px;
+  align-self: end;
+  min-height: 36px;
+  min-width: 0;
+  padding-bottom: 0;
+  white-space: nowrap;
 }
 
 .switch-control input {
@@ -375,7 +381,7 @@ select {
 .panel-header h2 {
   margin: 0;
   color: #121826;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .panel-header small {
@@ -394,7 +400,7 @@ table {
 
 th {
   color: #65736f;
-  font-size: 12px;
+  font-size: 11px;
   text-align: left;
   text-transform: uppercase;
 }
@@ -433,7 +439,7 @@ tbody tr:hover {
   border-radius: 999px;
   background: #f8fafc;
   padding: 0 10px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   white-space: nowrap;
 }
@@ -529,7 +535,7 @@ tbody tr:hover {
   }
 
   .topbar h1 {
-    font-size: 23px;
+    font-size: 21px;
   }
 
   .topbar-actions {

@@ -111,12 +111,14 @@ function App() {
     <main className="app-shell">
       <aside className="sidebar" aria-label="Resumo da rotina">
         <div className="brand">
-          <span className="brand-mark">
-            <Banknote size={22} />
-          </span>
+          <span className="brand-mark">GB</span>
           <div>
             <strong>Conciliação Bancária</strong>
-            <small>React + TypeScript</small>
+            <small>
+              React + TypeScript
+              <br />
+              George Barreto
+            </small>
           </div>
         </div>
 
