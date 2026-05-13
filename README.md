@@ -1,14 +1,34 @@
-# Conciliação Bancária React TS
+# Conciliação Bancária React + TypeScript
 
-Ferramenta web em React + TypeScript para simular uma rotina de conciliação bancária entre extrato bancário e lançamentos internos.
+Aplicação web para simular uma rotina de conciliação bancária entre extrato bancário e lançamentos internos, com importação CSV, regras de comparação e classificação de divergências.
 
-O projeto foi criado como demo de portfólio para demonstrar interface corporativa, processamento de dados financeiros, regras de comparação, importação CSV e organização de código frontend moderno.
-
-## Preview
-
-Demo online: https://georgebarret0.github.io/conciliacao-bancaria-react-ts/
+[![Demo](https://img.shields.io/badge/Demo-GitHub%20Pages-1769c7?style=for-the-badge)](https://georgebarret0.github.io/conciliacao-bancaria-react-ts/)
+[![Stack](https://img.shields.io/badge/Stack-React%20%2B%20TypeScript-334155?style=for-the-badge)](#stack)
 
 ![Preview da conciliação bancária](conciliacao-preview.png)
+
+## Visão geral
+
+Este projeto demonstra uma rotina comum em sistemas financeiros corporativos: leitura de dados, normalização, comparação por regras, identificação de divergências e apresentação operacional para revisão.
+
+A interface foi pensada como uma mesa de trabalho: filtros, indicadores, importação, exportação e tabela de resultados em uma experiência objetiva para operação financeira.
+
+## Funcionalidades
+
+- Comparação entre extrato bancário e lançamentos internos.
+- Classificação automática por status:
+  - conciliado;
+  - divergência de valor;
+  - divergência de data;
+  - sem lançamento interno;
+  - sem movimento bancário;
+  - revisão manual.
+- Configuração de tolerância de valor e dias.
+- Exigência opcional de correspondência por documento.
+- Filtro por status e busca por documento, descrição ou motivo.
+- Importação de CSV para extrato e lançamentos internos.
+- Exportação do resultado conciliado em CSV.
+- Layout responsivo para desktop e mobile.
 
 ## Stack
 
@@ -16,23 +36,8 @@ Demo online: https://georgebarret0.github.io/conciliacao-bancaria-react-ts/
 - TypeScript
 - Vite
 - PapaParse para leitura de CSV
-- Lucide React para ícones
-
-## Funcionalidades
-
-- Comparação entre extrato bancário e lançamentos internos.
-- Classificação automática por status:
-  - Conciliado
-  - Divergência de valor
-  - Divergência de data
-  - Sem lançamento interno
-  - Sem movimento bancário
-  - Revisão manual
-- Configuração de tolerância de valor e dias.
-- Filtro por status e busca por documento/descrição.
-- Importação de CSV para extrato e lançamentos internos.
-- Exportação do resultado conciliado em CSV.
-- Layout responsivo para desktop e mobile.
+- Lucide React
+- CSS moderno
 
 ## Como rodar
 
@@ -53,17 +58,9 @@ Preview local:
 npm run preview
 ```
 
-## Demo local no AppServ
-
-Depois do build, os arquivos ficam em `dist/` e podem ser servidos como site estático.
-
-```text
-C:\AppServ\www\git\conciliacao-bancaria-react-ts\dist
-```
-
 ## Arquivos CSV
 
-Os modelos de CSV ficam em:
+Modelos de CSV:
 
 ```text
 public/examples/extrato-bancario.csv
@@ -92,8 +89,15 @@ A rotina compara registros por documento, valor, data e descrição. Quando enco
 - documento encontrado + valor divergente: divergência de valor;
 - documento encontrado + data divergente: divergência de data;
 - movimento bancário sem interno: pendente no sistema;
-- interno sem banco: pendente no banco.
+- interno sem banco: pendente no banco;
+- combinação inconclusiva: revisão manual.
 
 ## Objetivo técnico
 
-Este projeto mostra uma rotina comum em sistemas financeiros corporativos: leitura de dados, normalização, aplicação de regras, classificação de divergências e apresentação operacional para tomada de decisão.
+O foco deste projeto é mostrar domínio em:
+
+- modelagem de regra de negócio no frontend;
+- organização de tipos com TypeScript;
+- parsing e normalização de CSV;
+- filtros e estados de interface;
+- apresentação de divergências financeiras de forma operacional.
